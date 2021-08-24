@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 초기화 */
+body, h1, h2, h3, ul, figure { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+address { font-size: normal; }
+small { font-size: 1em; }
+.hidden { position: absolute; left: -9999px; }
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body { width: 720px; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif;
+       background: #b8dbf8; }
+h1 { font-family: 'IBMPlexSansKR-Regular'; }
+h2 { font-family: 'GowunBatang-Regular'; }
+/* 헤더 */
+#header { position: relative; height: 275px; background: url(../images/bg.png) no-repeat;}
+#header .hgroup { position: absolute; bottom: 25px; right: 32px; color: #fff; }
+#header h1 { font-size: 36px; margin-bottom: 25px;}
+#header h2 { font-size: 18px; }
+/* gnb */
+#gnb { height: 60px; }
+#gnb ul li { width: 25%; float: left; }
+#gnb ul li a { display: block; background: #036; color: #fff;
+               text-align: center; line-height: 60px; }
+#gnb ul li a:hover { background: #ffffff; color: #000; font-weight: bold; }
+#gnb ul li.on a  { background: #ffffff; color: #000; font-weight: bold; }
+/* 메인 */
+#content { background: #fff; padding: 20px 10px; }
+#content article h3 { margin: 20px 0; }
+#content article figure { margin-left: 40px; }
+#content article figure:nth-of-type(2) { margin-top: 20px; }
+/* footer */
+#footer { text-align: center; background: #030; color: #fff; padding: 30px 0 10px; }
+#footer p { margin-bottom: 15px; }

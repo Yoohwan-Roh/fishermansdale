@@ -11,7 +11,7 @@
 #subHeader::before { content: ""; position: absolute; top: 0; left: 0;
                      width: 100%; height: 300px;
                      background: rgba(0, 0, 0, 0.3); }
-#subHeader.subHeaderCompany { background-image: url(../images/subTitleCompany.jpg);}
+
 /* 붙여서 적어야함. 띄워쓰면 자식요소가 됨 */
 /* 각각 다른 페이지 에서는 클래스 이름만 바꿔서 선택자 적용하면 됨 */
 #subHeader h2 { position: relative;
@@ -30,6 +30,8 @@
 #snb ul li { width: 230px; height: 50px; line-height: 50px; border-bottom: 1px solid #333;
              background: url(../images/bulletSnb.png) no-repeat right; text-indent: 10px; }
 #snb ul li a { text-transform: uppercase; color: #333; font-size: 18px; }
+#snb ul li a :hover { color: #e77348; border-bottom-color: #877348;
+                      background-image: url(../images/bulletSnbOver.png) no-repeat 229px center; }
 /* subContent */
 #subContent { position: relative; margin-left: 280px; }
 #subContent h3 { margin-top: 32px; color: #c6c6c6; font-size: 45px; font-family:'Cormorant Garamond', serif; }
@@ -37,5 +39,36 @@
 #subContent figure img { }
 #subContent figure figcaption { text-align: center; color: #3c9cec; }
 #subContent p { }
-
 hr { display:  none; }
+#subHeader.subHeaderCompany { background-image: url(../images/subTitleCompany.jpg);}
+#subHeader.subHeaderCustomer { background-image: url(../images/subTitleCustomer.jpg);}
+/* subContentCustomer */
+#snb .snbTitleCustomer { padding-top: 20px; line-height: 1.2em; box-sizing: border-box; }
+#notice { width: 660px; }
+#notice thead { height: 30px; }
+#notice thead th { height: 30px;
+                   text-transform: capitalize;
+                   color: #fff; font-weight: normal;
+                   background: linear-gradient(180deg, #6dbaf2 0%, #246fd2 100%);  }
+#notice thead th.No { width: 56px; border-radius: 5px 0 0 5px;}
+#notice thead th.Title { width: 376px; letter-spacing: 1em; }
+#notice thead th.Writer { width: 100px; }
+#notice thead th.Data { width: 72px; }
+#notice thead th.Read { width: 56px; border-radius: 0 5px 5px 0;}
+#notice tbody {  }
+#notice tbody td { text-align: center; padding: 5px 0;
+                   border-bottom: 1px solid #ccc; }
+#notice tbody td:nth-child(2) { text-align: left; }
+/* #notice tbody td div { width: 376px;
+                       white-space: nowrap;
+                       overflow: hidden;
+                       text-overflow: ellipsis; } */
+/* 길이가 길어서 두줄 이상이 될 때 줄이고 ...으로 처리하는 코드 */
+/* noticeSearch */
+#noticeSearch { margin: 16px 45px 35px 0; text-align: right; }
+#noticeSearch fieldset { border: 0; }
+#searchBox { width: 200px; height: 20px; border-radius: 10px; }
+#searchBtn { width: 88px; height: 20px; border-radius: 10px; }
+/* 페이지 번호 */
+#page_control { margin-right: 45px; text-align: center; }
+#page_control a { margin: 0 13px; color: #333; }

@@ -30,12 +30,12 @@
     <hr>
     <!-- 서브 시작 -->
     <section id="container">
-      <header id="subHeader" class="subHeaderCustomerCenter">
+      <header id="subHeader" class="subHeaderCustomer">
         <h2>customer center</h2>
       </header>
       <div id="subWrap">
         <nav id="snb">
-          <h3>customer<br>center <span class="hidden">서브메뉴</span></h3>
+          <h3 class="snbTitleCustomer">customer<br>center <span class="hidden">서브메뉴</span></h3>
           <ul>
             <li><a href="customer_center.html">notice</a></li>
             <li><a href="#">public news</a></li>
@@ -43,16 +43,17 @@
             <li><a href="#">service policy</a></li>
           </ul>
         </nav>
-        <article id="subContent">
+        <div id="subContent">
           <h3>Notice</h3>
-          <table>
+          <table id="notice">
+            <caption class="hidden">공지사항</caption>
             <thead>
               <tr>
-                <th scope="col" id="No">No.</th>
-                <th scope="col" id="Title">Title</th>
-                <th scope="col" id="Writer">Writer</th>
-                <th scope="col" id="Date">Date</th>
-                <th scope="col" id="Read">Read</th>
+                <th scope="col" class="No">No.</th>
+                <th scope="col" class="Title">Title</th>
+                <th scope="col" class="Writer">Writer</th>
+                <th scope="col" class="Date">Date</th>
+                <th scope="col" class="Read">Read</th>
               </tr>
             </thead>
             <tbody>
@@ -65,7 +66,7 @@
               </tr>
               <tr>
                 <th scope="row" id="No_14">14</th>
-                <td headers="Title No_14">L<a href="#">Lorem ipsum dolor sit amet</a></td>
+                <td headers="Title No_14"><a href="#">Lorem ipsum dolor sit amet</a></td>
                 <td headers="Writer No_14">Host Admin</td>
                 <td headers="Date No_14">2011.05.11</td>
                 <td headers="Read No_14">15000</td>
@@ -163,11 +164,16 @@
               </tr>
             </tbody>
           </table>
-          <form>
-            <input type="search" name="search">
-            <input type="submit" name="submit" value="Search">
+          <form id="noticeSearch">
+            <fieldset>
+              <legend class="hidden">공지사항검색</legend>
+              <label for="searchBox" class="hidden">검색어입력창</label>
+              <input type="search" id="searchBox">
+              <label for="SearchBtn" class="hidden">검색버튼</label>
+              <input type="submit" id="searchBtn" value="Search">
+            </fieldset>
           </form>
-          <div>
+          <div id="page_control">
             <a href="#">Prev</a>
             <a href="#">1</a>
             <a href="#">2</a>
@@ -181,7 +187,7 @@
             <a href="#">10</a>
             <a href="#">Next</a>
           </div>
-        </article>
+        </div>
       </div>
     </section>
     <hr>

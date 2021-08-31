@@ -2,7 +2,9 @@
 /* @import "main.css";
 @import "sub.css"; */
 /* 초기화 */
-body, h1, h2, h3, h4, h5, h6, ul, p, dl, dd { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, h5, h6, ul, p, dl, dd, figure, th, td, fieldset, input { margin: 0; padding: 0; }
+table { border-collapse: collapse; }
+fieldset. img { border: 0; }
 li { list-style: none; }
 a { text-decoration: none; }
 address { font-style: normal; }

@@ -2,64 +2,145 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>모바일</title>
-    <meta name="viewport" content="width=device-width">
+    <title>쓰레기 백과사전</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="common.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="common.js" defer charset="utf-8"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header id="header">
-      <h1>Mobile</h1>
-      <a href="#" class="btn">button</a>
-      <a href="#" class="toggle">toggle</a>
+      <h1>
+        <a href="#">recycloud</a>
+      </h1>
+      <nav id="snb">
+        <h2 class="hidden">searchbox inside the page and contact us</h2>
+        <ul>
+          <li>
+            <form class="snbSearchBox">
+              <input type="search" class="snbSearch" placeholder="사이트 내 검색">
+              <div class="snbSubmit">
+                <a href="#">검색</a>
+              </div>
+            </form>
+          </li>
+          <li class="contact"><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+      <nav id="gnb">
+        <h2 class="hidden">recycloud main menu</h2>
+        <div class="togBtn"></div>
+        <ul class="bigNav">
+          <li class="nav nav1">
+            <a href="#">About us</a>
+          </li>
+          <li class="nav nav2">
+            <a href="#">Guide</a>
+            <ul class="smallNav">
+              <li><a href="#">종이류</a></li>
+              <li><a href="#">병류</a></li>
+              <li><a href="#">플라스틱</a></li>
+              <li><a href="#">캔</a></li>
+              <li><a href="#">건전지</a></li>
+              <li><a href="#">비닐류</a></li>
+              <li><a href="#">음식물쓰레기</a></li>
+            </ul>
+          </li>
+          <li class="nav nav3">
+            <a href="#">info</a>
+            <ul class="smallNav">
+              <li><a href="#">재활용이 되는 과정</a></li>
+              <li><a href="#">재활용 로고의 의미</a></li>
+              <li><a href="#">Facts and info</a></li>
+            </ul>
+          </li>
+          <li class="nav nav4">
+            <a href="#">News Room</a>
+            <ul class="smallNav">
+              <li><a href="#">최신 뉴스</a></li>
+              <li><a href="#">사회적 캠페인</a></li>
+            </ul>
+          </li>
+          <li class="nav nav5">
+            <a href="#">Community</a>
+            <ul class="smallNav">
+              <li><a href="#">질문과 답변</a></li>
+              <li><a href="#">자유게시판</a></li>
+              <li><a href="#">upcycling goods</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <nav id="toggleGnb">
-      <ul>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-      </ul>
-    </nav>
-    <script>
-      $("#toggleGnb").hide();
-      $(".toggle").on('click', function(){
-      $("#toggleGnb").slideToggle();  
-      })
-    </script>
-    <nav id="topGnb">
-      <ul>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-      </ul>
-    </nav>
-    <nav id="bottomGnb">
-      <ul>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-        <li><a href="#">버튼</a></li>
-      </ul>
-    </nav>
-    <section id="content">
-      <header id="contentHeader">
-        <h2>Lorem Ipsum</h2>
-        <time datetime="2021-08-31">2021-08-31 Birthday</time>
-      </header>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+    <section id="slderwrap">
+      <h2 class="hidden">슬로건</h2>
+      <!-- swiper plugin -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide0">
+            <p>for a sustainable planet</p>
+          </div>
+          <div class="swiper-slide slide1">
+            <p><q>30년 내 북극 얼음 다 녹을수도</q></p>
+          </div>
+          <div class="swiper-slide slide2">
+            <p><q>미세먼지로 인한 암 사망률 최대 60&#37; 높아</q></p>
+          </div>
+          <div class="swiper-slide slide3">
+            <p><q>전국 불법 쓰레기산 400여개, 10년 내 쓰레기 대란 온다</q></p>
+          </div>
+          <div class="swiper-slide slide4">
+            <p><q>태평양 거대 쓰레기 지대, 대한민국 면적의 15배 넘어</q></p>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
-    <footer id="footer">
-      <address>HTML+CSS3 Basic</address>
-      <small>Website Layout Basic</small>
-    </footer>
+    <section id="searchWrap">
+      <h2 class="hidden">검색박스</h2>
+      <div class="searchBox">
+        <p>배출하려는 물품의 분리배출 방법을 찾아보세요</p>
+        <form>
+          <input type="search" class="mainSearch">
+          <div class="mainSubmit">
+            <a href="#">검색</a>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="qckWrap">
+      <h2 class="hidden">빠른 바로가기 아이콘</h2>
+      <p>궁금하신 물품을 선택하세요</p>
+      <div class="qckIcon">
+        <div class="icon1">
+          <a href="#">일반쓰레기</a>
+        </div>
+        <div class="icon2">
+          <a href="#">폐건전지</a>
+        </div>
+        <div class="icon3">
+          <a href="#">종이</a>
+        </div>
+        <div class="icon4">
+          <a href="#">의류</a>
+        </div>
+        <div class="icon5">
+          <a href="#">음식물쓰레기</a>
+        </div>
+        <div class="icon6">
+          <a href="#">대형폐기물</a>
+        </div>
+        <div class="icon7">
+          <a href="#">플라스틱</a>
+        </div>
+        <div class="icon8">
+          <a href="#">병류</a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
